@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #06283d;
+
+    .container {
+        position: relative;
+        width: 400px;
+        height: 105px;
+        background: #fff;
+        padding: 28px 32px;
+        overflow: hidden;
+        border-radius: 18px;
+        font-family: Manrope;
+        transition: 0.6s ease-out;
+
+        .search-box {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+                font-family: Manrope;
+                color: #06283d;
+                width: 88%;
+                font-size: 24px;
+                font-weight: 500;
+                text-transform: uppercase;
+                padding-left: 32px;
+                &::placeholder {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #06283d;
+                    text-transform: capitalize;
+                }
+            }
+            button {
+                cursor: pointer;
+                width: 50px;
+                height: 50px;
+                color: #06283d;
+                background: #dff6ff;
+                border-radius: 50%;
+                font-size: 22px;
+                transition: 0.4s ease;
+                &:hover {
+                    color: #fff;
+                    background: #06283d;
+                }
+            }
+
+            i {
+                position: absolute;
+                color: #06283d;
+                font-size: 28px;
+            }
+        }
+
+        .not-found {
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+            scale: 0;
+            opacity: 0;
+            display: none;
+            img {
+                width: 70%;
+            }
+            p {
+                color: #06283d;
+                font-size: 22px;
+                font-weight: 500;
+                margin-top: 12px;
+            }
+        }
+        
+        .weather-box {
+            scale: 0;
+            opacity: 0;
+            text-align: center;
+            img {
+                width: 60%;
+                margin-top: 30px;
+            }
+            .temperature {
+                position: relative;
+                color: #06283d;
+                font-size: 4rem;
+                font-weight: 800;
+                margin-top: 30px;
+                margin-left: -16px;
+                span {
+                    position: absolute;
+                    margin-left: 4px;
+                    font-size: 1.5rem;
+                }
+            }
+            .description {
+                color: #06283d;
+                font-size: 22px;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+        }
+        .weather-details {
+            scale: 0;
+            opacity: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .humidity {
+                display: flex;
+                align-items: center;
+                width: 50%;
+                height: 100px;
+                padding-left: 20px;
+                justify-content: flex-start;
+            }
+            .wind {
+                padding-right: 20px;
+                justify-content: flex-end;
+                display: flex;
+                align-items: center;
+                width: 50%;
+                height: 100px;
+            }
+            i {
+                color: #06283d;
+                font-size: 26px;
+                margin-right: 10px;
+                margin-top: 6px;
+            }
+            span {
+                color: #06283d;
+                font-size: 22px;
+                font-weight: 500;
+            }
+            p {
+                color: #06283d;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        .fade-in {
+            scale: 1;
+            opacity: 1;
+        }
+    }
+}
+
